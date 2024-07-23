@@ -25,4 +25,4 @@ outputs:
     description: "The SVG string to show the chart."
 runs:
   using: "node20"
-  main: "dist/index.js"
+  main: "index.js"
