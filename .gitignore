@@ -79,7 +79,6 @@ build/Release
 .next
 
 # Source files.
-src
 
 # JSDoc Generated Docs
 docs
