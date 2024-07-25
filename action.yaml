@@ -5,7 +5,7 @@ inputs:
   GH_TOKEN:
     description: "GitHub repository token."
     required: true
-  AUTH_TOKEN:
+  WAKA_AUTH_TOKEN:
     description: "Auth token of the user."
     required: true
   GH_WORKSPACE:
