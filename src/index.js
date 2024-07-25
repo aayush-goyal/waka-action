@@ -27,7 +27,7 @@ try {
 
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
-    // const configs = mdContent.match(configRegex);
+    const configs = mdContent.match(configRegex);
     // console.log('CONFIGS:', configs);
 
     for (let config of configs) {
