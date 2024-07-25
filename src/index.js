@@ -10,6 +10,7 @@ try {
     const githubToken = core.getInput('GH_TOKEN');
     const workspace = core.getInput('GH_WORKSPACE');
     const mdFilePath = `${workspace}/README.md`;
+    console.log('PATH:', mdFilePath);
     const content2 = await fsPromises.readFile(mdFilePath, 'utf8');
 
     console.log('CONTENT:', content2);
