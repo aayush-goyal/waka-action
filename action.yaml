@@ -8,6 +8,12 @@ inputs:
   AUTH_TOKEN:
     description: "Auth token of the user."
     required: true
+  GH_WORKSPACE:
+    description: "GitHub repository name"
+    required: true
+  GH_REPO:
+    description: "GitHub repository name"
+    required: true
 #   STAT_TYPE:
 #     description: "Stat type to show on chart."
 #     required: true
