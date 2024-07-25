@@ -28,7 +28,7 @@ try {
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
-    // console.log('CONFIGS:', configs);
+    const map = new Map();
 
     for (let config of configs) {
         const regex =
@@ -55,8 +55,10 @@ try {
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
             const chartSVG = apiResponse.data;
+            mdContent.replace(config, chartSVG);
+            await fsPromises.writeFile(mdFilePath, mdContent);
 
-            console.log('CHART:', chartSVG);
+            console.log('CHART:', mdContent);
         } else {
             console.log(`No query params provided in ${config}`);
         }
