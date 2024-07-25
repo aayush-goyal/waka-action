@@ -79,7 +79,7 @@ try {
     // Push the changes
     await exec.exec('git', [
         'push',
-        `https://${process.env.GITHUB_ACTOR}:${githubToken}@github.com/${owner}/${repo}.git`
+        `https://${process.env.GITHUB_ACTOR}:${githubToken}@github.com/${githubActor}/${repo}.git`
     ]);
 } catch (error) {
     core.setFailed(error.message);
