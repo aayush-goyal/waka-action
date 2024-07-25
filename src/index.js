@@ -55,8 +55,8 @@ try {
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
             const chartSVG = apiResponse.data;
-            mdContent.replace(config, chartSVG);
-            await fsPromises.writeFile(mdFilePath, mdContent);
+            const newMdContent = mdContent.replace(config, chartSVG);
+            await fsPromises.writeFile(mdFilePath, newMdContent);
 
             console.log('CHART:', mdContent);
         } else {
