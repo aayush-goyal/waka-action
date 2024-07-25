@@ -37,7 +37,7 @@ try {
             /<!-- WAKAWAKA_CONFIG__ST=(\d)&CT=(\d)&DT=(\d)&R=(\d) -->/;
 
         // Match the string against the regex and extract the captured groups
-        const queryParams = configs.match(regex);
+        const queryParams = config.match(regex);
         console.log('PARAMS: ', queryParams);
 
         if (queryParams) {
