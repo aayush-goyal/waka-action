@@ -1,5 +1,6 @@
 import axios from 'axios';
 import core from '@actions/core';
+import github from '@actions/github';
 import exec from '@actions/exec';
 import { promises as fsPromises } from 'fs';
 
@@ -31,7 +32,6 @@ try {
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
-    const map = new Map();
 
     for (let config of configs) {
         const regex =
@@ -76,10 +76,15 @@ try {
         'Updated WakaTime metrics on README.md'
     ]);
 
+    const repoPathArr = workspace.split('/');
     // Push the changes
     await exec.exec('git', [
         'push',
-        `https://${process.env.GITHUB_ACTOR}:${githubToken}@github.com/${githubActor}/${repo}.git`
+        `https://${
+            process.env.GITHUB_ACTOR
+        }:${githubToken}@github.com/${githubActor}/${
+            repoPathArr[repoPathArr.length - 1]
+        }.git`
     ]);
 } catch (error) {
     core.setFailed(error.message);
