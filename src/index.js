@@ -13,12 +13,12 @@ try {
     // console.log('PATH:', mdFilePath);
     const content2 = await fsPromises.readFile(mdFilePath, 'utf8');
 
-    content2.replace(
+    const replaced = content2.replace(
         /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/,
         'replaced'
     );
 
-    console.log('LOG:', content2);
+    console.log('LOG:', replaced);
 
     //     <!-- WAKAWAKA_START -->
     // <!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
