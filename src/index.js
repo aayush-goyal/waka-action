@@ -1,5 +1,6 @@
 import axios from 'axios';
 import core from '@actions/core';
+import exec from '@actions/exec';
 import { promises as fsPromises } from 'fs';
 
 const API_BASE_URL = 'https://server-7hzpew6hia-el.a.run.app';
@@ -57,12 +58,21 @@ try {
             const chartSVG = apiResponse.data;
             const newMdContent = mdContent.replace(config, chartSVG);
             await fsPromises.writeFile(mdFilePath, newMdContent);
-
-            console.log('CHART:', mdContent);
         } else {
             console.log(`No query params provided in ${config}`);
         }
     }
+
+    await exec.exec('git', ['add', '.']);
+
+    // Commit the changes
+    await exec.exec('git', ['commit', '-m', 'Modified README.md']);
+
+    // Push the changes
+    await exec.exec('git', [
+        'push',
+        `https://${process.env.GITHUB_ACTOR}:${githubToken}@github.com/${owner}/${repo}.git`
+    ]);
 } catch (error) {
     core.setFailed(error.message);
 }
