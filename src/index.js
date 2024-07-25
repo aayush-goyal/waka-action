@@ -42,10 +42,10 @@ try {
 
         if (queryParams) {
             // Extracted digit values are in the matches array starting from index 1
-            const statType = getStatType(matches[1]);
-            const chartType = matches[2];
-            const dataType = matches[3];
-            const range = matches[4];
+            const statType = getStatType(queryParams[1]);
+            const chartType = queryParams[2];
+            const dataType = queryParams[3];
+            const range = queryParams[4];
 
             const chartSVG = await axios.get(
                 `https://server-7hzpew6hia-el.a.run.app/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
