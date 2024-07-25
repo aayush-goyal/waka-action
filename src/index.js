@@ -14,7 +14,7 @@ try {
     const content2 = await fsPromises.readFile(mdFilePath, 'utf8');
 
     content2.replace(
-        /<!-- WAKAWAKA_CONFIG ST=\d&CT=\d&DT=\d&R=\d -->/,
+        /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/,
         'replaced'
     );
 
