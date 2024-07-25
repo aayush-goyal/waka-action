@@ -21,7 +21,9 @@ function getStatType(statType) {
 }
 
 try {
+    const commitEmail = core.getInput('COMMIT_EMAIL');
     const githubToken = core.getInput('GH_TOKEN');
+    const githubActor = core.getInput('GH_ACTOR');
     const wakaToken = core.getInput('WAKA_AUTH_TOKEN');
     const workspace = core.getInput('GH_WORKSPACE');
     const mdFilePath = `${workspace}/README.md`;
@@ -63,10 +65,16 @@ try {
         }
     }
 
+    await exec.exec('git', ['config', '--global', 'user.name', githubActor]);
+    await exec.exec('git', ['config', '--global', 'user.email', commitEmail]);
     await exec.exec('git', ['add', '.']);
 
     // Commit the changes
-    await exec.exec('git', ['commit', '-m', 'Modified README.md']);
+    await exec.exec('git', [
+        'commit',
+        '-m',
+        'Updated WakaTime metrics on README.md'
+    ]);
 
     // Push the changes
     await exec.exec('git', [

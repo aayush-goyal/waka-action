@@ -11,18 +11,12 @@ inputs:
   GH_WORKSPACE:
     description: "GitHub repository name"
     required: true
-#   STAT_TYPE:
-#     description: "Stat type to show on chart."
-#     required: true
-#   CHART_TYPE:
-#     description: "Chart type to show stat."
-#     required: true
-#   RANGE:
-#     description: "Range the user wants for stat."
-#     required: true
-#   DATA_TYPE:
-#     description: "Data type to show stat chart."
-#     required: true
+  GH_ACTOR:
+    description: "GitHub username"
+    required: true
+  COMMIT_EMAIL:
+    description: "GitHub email"
+    required: true
 outputs:
   svg:
     description: "The SVG string to show the chart."
