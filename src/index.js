@@ -47,12 +47,15 @@ try {
             const range = queryParams[4];
 
             console.log(
+                config,
                 `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
             );
 
             const chartSVG = await axios.get(
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
+
+            console.log('CHART:', chartSVG);
         } else {
             console.log(`No query params provided in ${config}`);
         }

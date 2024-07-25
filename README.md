@@ -73,7 +73,7 @@ Also check out our other products<br />
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=1&DT=0&R=0 -->
 <!-- WAKAWAKA_END -->
 
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
