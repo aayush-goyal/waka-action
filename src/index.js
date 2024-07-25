@@ -6,13 +6,13 @@ const API_BASE_URL = 'https://server-7hzpew6hia-el.a.run.app';
 
 function getStatType(statType) {
     switch (statType) {
-        case 0:
+        case '0':
             return 'languages';
-        case 1:
+        case '1':
             return 'categories';
-        case 2:
+        case '2':
             return 'editors';
-        case 3:
+        case '3':
             return 'os';
         default:
             return 'projects';
