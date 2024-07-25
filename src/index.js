@@ -13,18 +13,21 @@ try {
     // console.log('PATH:', mdFilePath);
     const content2 = await fsPromises.readFile(mdFilePath, 'utf8');
 
-    content2.replace(/<!-- WAKAWAKA_CONFIG ST=\d&CT=\d&DT=\d&R=\d -->/, 'replaced');
+    content2.replace(
+        /<!-- WAKAWAKA_CONFIG ST=\d&CT=\d&DT=\d&R=\d -->/,
+        'replaced'
+    );
 
     console.log('LOG:', content2);
 
-//     <!-- WAKAWAKA_START -->
-// <!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
-// <!-- WAKAWAKA_CONFIG ST=\d&CT=\d&DT=\d&R=\d -->
-// <!-- WAKAWAKA_END -->
+    //     <!-- WAKAWAKA_START -->
+    // <!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
+    // <!-- WAKAWAKA_CONFIG ST=\d&CT=\d&DT=\d&R=\d -->
+    // <!-- WAKAWAKA_END -->
 
-    const
+    // const
 
-    console.log('CONTENT:', content2);
+    // console.log('CONTENT:', content2);
 
     // const currentWorkingDirectory = dirname(fileURLToPath(import.meta.url));
     // // const mdFilePath = join(currentWorkingDirectory, '../utils/langs.json');
