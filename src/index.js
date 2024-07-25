@@ -5,7 +5,7 @@ const API_BASE_URL = 'https://server-7hzpew6hia-el.a.run.app';
 
 try {
     const githubToken = core.getInput('GH_TOKEN');
-    console.log(githubToken);
+    console.log('aayush');
 } catch (error) {
     core.setFailed(error.message);
 }
