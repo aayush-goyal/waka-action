@@ -51,14 +51,10 @@ try {
                 `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
             );
 
-            const chartSVG = axios
-                .get(
-                    `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
-                )
-                .then((result) => {
-                    console.log('RESPONSE:', result);
-                })
-                .catch((error) => console.log('error', error.toString()));
+            const apiResponse = await axios.get(
+                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
+            );
+            const chartSVG = apiResponse.data;
 
             console.log('CHART:', chartSVG);
         } else {
