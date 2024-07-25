@@ -1,11 +1,8 @@
 import axios from 'axios';
 import core from '@actions/core';
 import { promises as fsPromises } from 'fs';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
 
 const API_BASE_URL = 'https://server-7hzpew6hia-el.a.run.app';
-// const svgData = axios.get(`${API_BASE_URL}/`);
 
 function getStatType(statType) {
     switch (statType) {
@@ -31,6 +28,7 @@ try {
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
+    console.log('CONFIGS:', configs);
 
     for (let config of configs) {
         const regex =
@@ -47,12 +45,17 @@ try {
             const dataType = queryParams[3];
             const range = queryParams[4];
 
-            const chartSVG = await axios.get(
-                `https://server-7hzpew6hia-el.a.run.app/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
+            console.log(
+                `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
             );
 
             console.log(
-                `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
+                'URL:',
+                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
+            );
+
+            const chartSVG = await axios.get(
+                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
 
             console.log();
