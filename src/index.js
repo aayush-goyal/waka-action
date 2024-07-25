@@ -27,8 +27,8 @@ try {
 
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
-    const configs = mdContent.match(configRegex);
-    console.log('CONFIGS:', configs);
+    // const configs = mdContent.match(configRegex);
+    // console.log('CONFIGS:', configs);
 
     for (let config of configs) {
         const regex =
@@ -40,6 +40,7 @@ try {
 
         if (queryParams) {
             // Extracted digit values are in the matches array starting from index 1
+            console.log('statType:', queryParams[1]);
             const statType = getStatType(queryParams[1]);
             const chartType = queryParams[2];
             const dataType = queryParams[3];
@@ -49,18 +50,9 @@ try {
                 `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
             );
 
-            console.log(
-                'URL:',
-                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
-            );
-
             const chartSVG = await axios.get(
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
-
-            console.log();
-
-            console.log('SVG', chartSVG);
         } else {
             console.log(`No query params provided in ${config}`);
         }
