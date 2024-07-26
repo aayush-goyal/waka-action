@@ -64,7 +64,7 @@ try {
             const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
             const imgTagMatches = mdContent.match(imgRegex);
 
-            if (!imgTagMatches) {
+            if (imgTagMatches) {
                 for (let imgTagMatch of imgTagMatches) {
                     mdContent = mdContent.replace(imgTagMatch);
                 }
