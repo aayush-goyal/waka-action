@@ -45,20 +45,13 @@ try {
 
         // Match the string against the regex and extract the captured groups
         const queryParams = config.match(regex);
-        console.log('PARAMS: ', queryParams);
 
         if (queryParams) {
             // Extracted digit values are in the matches array starting from index 1
-            console.log('statType:', queryParams[1]);
             const statType = getStatType(queryParams[1]);
             const chartType = queryParams[2];
             const dataType = queryParams[3];
             const range = queryParams[4];
-
-            console.log(
-                config,
-                `ST: ${statType}, CT: ${chartType}, DT: ${dataType}, R: ${range}`
-            );
 
             const apiResponse = await axios.get(
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
@@ -66,20 +59,32 @@ try {
             const chartSVG = apiResponse.data;
 
             const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}`;
-            fs.writeFileSync(imgFilePath, chartSVG);
             await fsPromises.writeFile(imgFilePath, chartSVG);
-            // const newMdContent = mdContent.replace(config, chartSVG);
-            // await fsPromises.writeFile(mdFilePath, newMdContent);
+
+            const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
+            const imgTagMatches = mdContent.match(imgRegex);
+
+            if (!imgTagMatches) {
+                for (let imgTagMatch of imgTagMatches) {
+                    mdContent = mdContent.replace(imgTagMatch);
+                }
+            } else {
+                config =
+                    config +
+                    '\n' +
+                    '<img src=`${imgFilePath}` alt="WakaTime chart" />';
+            }
+
+            await fsPromises.writeFile(mdFilePath, mdContent);
         } else {
             console.log(`No query params provided in ${config}`);
         }
     }
 
+    // Git Commit
     await exec.exec('git', ['config', '--global', 'user.name', githubActor]);
     await exec.exec('git', ['config', '--global', 'user.email', commitEmail]);
     await exec.exec('git', ['add', '.']);
-
-    // Commit the changes
     await exec.exec('git', [
         'commit',
         '-m',
@@ -87,7 +92,6 @@ try {
     ]);
 
     const repoPathArr = workspace.split('/');
-    // Push the changes
     await exec.exec('git', [
         'push',
         `https://${
