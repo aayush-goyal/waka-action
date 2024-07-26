@@ -30,6 +30,11 @@ try {
     const mdFilePath = `${workspace}/README.md`;
     const imgFolderPath = `${workspace}/img`;
 
+    // Create `img` folder, if not exists already.
+    if (!fs.existsSync(imgFolderPath)) {
+        fs.mkdirSync(imgFolderPath, { recursive: true });
+    }
+
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
