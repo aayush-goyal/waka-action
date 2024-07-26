@@ -16,7 +16,7 @@ jobs:
         with:
           COMMIT_EMAIL: 'aayushgoyal.mps@gmail.com'
           GH_ACTOR: ${{ github.actor }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_WORKSPACE: ${{ github.workspace }}
           WAKA_AUTH_TOKEN: 'waka_tok_pBdorwDtjOpwcSXz5J6sncXhI6VQ0Cc8PfdbdJwxxY1fA9r92cUNgqfKpMxSXCWIqZ6Mo088J2MhFbg2&refresh_token=waka_ref_XPytg2bQj5iy6kboavuE7XCRbf0XDOFek5vDVtKf90lAYkVAhIDhxFK3Qn0rMcZzfaVcIdCwPUNteoTX&uid=13fde520-c1e3-4c7c-b538-6905d8c3ea6a&token_type=bearer&expires_at=2025-07-16T21%3A23%3A28Z&expires_in=31536000&scope=read_heartbeats%2Cread_goals%2Cread_private_leaderboards'
       # Use the output from the `hello` step

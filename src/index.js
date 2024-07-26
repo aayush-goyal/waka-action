@@ -28,6 +28,7 @@ try {
     const wakaToken = core.getInput('WAKA_AUTH_TOKEN');
     const workspace = core.getInput('GH_WORKSPACE');
     const mdFilePath = `${workspace}/README.md`;
+    const imgFolderPath = `${workspace}/img`;
 
     const mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
@@ -58,8 +59,10 @@ try {
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
             const chartSVG = apiResponse.data;
-            const newMdContent = mdContent.replace(config, chartSVG);
-            await fsPromises.writeFile(mdFilePath, newMdContent);
+            const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}`;
+            await fsPromises.writeFile(imgFilePath, chartSVG);
+            // const newMdContent = mdContent.replace(config, chartSVG);
+            // await fsPromises.writeFile(mdFilePath, newMdContent);
         } else {
             console.log(`No query params provided in ${config}`);
         }
