@@ -71,11 +71,12 @@ try {
                     mdContent = mdContent.replace(config, imgTagMatch);
                 }
             } else {
-                config =
+                mdContent.replace(
+                    config,
                     config +
-                    '\n' +
-                    '<img src=`${imgFilePath}` alt="WakaTime chart" />';
-                console.log('CONFIG: ', config);
+                        '\n' +
+                        `<img src="${imgFilePath}" alt="WakaTime chart" />`
+                );
             }
         } else {
             console.log(`No query params provided in ${config}`);
