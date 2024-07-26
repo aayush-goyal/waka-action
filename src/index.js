@@ -79,6 +79,7 @@ try {
         }
     }
 
+    console.log('LOG:', mdContent);
     await fsPromises.writeFile(mdFilePath, mdContent);
 
     // Git Commit
