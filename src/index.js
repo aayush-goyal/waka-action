@@ -2,7 +2,7 @@ import axios from 'axios';
 import core from '@actions/core';
 import github from '@actions/github';
 import exec from '@actions/exec';
-import { promises as fsPromises } from 'fs';
+import fs, { promises as fsPromises } from 'fs';
 
 const API_BASE_URL = 'https://server-7hzpew6hia-el.a.run.app';
 
@@ -59,7 +59,9 @@ try {
                 `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
             const chartSVG = apiResponse.data;
+
             const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}`;
+            fs.writeFileSync(imgFilePath, chartSVG);
             await fsPromises.writeFile(imgFilePath, chartSVG);
             // const newMdContent = mdContent.replace(config, chartSVG);
             // await fsPromises.writeFile(mdFilePath, newMdContent);
