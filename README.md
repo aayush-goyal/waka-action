@@ -48,7 +48,43 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 🛠️ After taking a career break, I joined Pickright as the sole Technical Project Manager. Leading a team of 14 members was challenging but we successfully delivered 30 features in under 5 months which 1. scaled the product to handle 1 million users, 2. made our product designs coherent and easy for users, 3. reduced daily bugs count by 70% and made the product stable, 4. delivered a few internal tools to collaborate with cross-functional teams, and 5. improved team efficiency by 20%.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 600 450">
+<rect width="600" height="450" x="0" y="0" fill="none"></rect>
+<path d="M60 380.5L540 380.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 316.5L540 316.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 252.5L540 252.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 188.5L540 188.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 124.5L540 124.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 60.5L540 60.5" fill="transparent" stroke="#E0E6F1" class="zr0-cls-0"></path>
+<path d="M60 380.5L540 380.5" fill="transparent" stroke="#6E7079" stroke-linecap="round" class="zr0-cls-0"></path>
+<path d="M60.5 380L60.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<path d="M156.5 380L156.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<path d="M252.5 380L252.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<path d="M348.5 380L348.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<path d="M444.5 380L444.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<path d="M540.5 380L540.5 385" fill="transparent" stroke="#6E7079" class="zr0-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 380)" fill="#6E7079">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 316)" fill="#6E7079">5</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 252)" fill="#6E7079">10</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 188)" fill="#6E7079">15</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 124)" fill="#6E7079">20</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(52 60)" fill="#6E7079">25</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(84 388)" fill="#6E7079">TypeScript</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(180 388)" fill="#6E7079">Java</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(276 388)" fill="#6E7079">JavaScript</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(372 388)" fill="#6E7079">JSON</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(468 388)" fill="#6E7079">Dart</text>
+<path d="M67.4 380l33.1 0l0 -259.8l-33.1 0Z" fill="#3178c6" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr0-cls-1 zr0-cls-2"></path>
+<path d="M115.4 380l33.1 0l0 -242.9l-33.1 0Z" fill="#A97BFF" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr0-cls-3 zr0-cls-4"></path>
+<path d="M163.4 380l33.1 0l0 -208l-33.1 0Z" fill="#b07219" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr0-cls-5 zr0-cls-6"></path>
+<path d="M211.4 380l33.1 0l0 -170.2l-33.1 0Z" fill="#0060ac" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr0-cls-7 zr0-cls-8"></path>
+<path d="M259.4 380l33.1 0l0 -150.1l-33.1 0Z" fill="#f1e05a" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr0-cls-9 zr0-cls-10"></path>
+<path d="M307.4 380l33.1 0l0 -52.4l-33.1 0Z" fill="#083fa1" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr0-cls-11 zr0-cls-12"></path>
+<path d="M355.4 380l33.1 0l0 -31.5l-33.1 0Z" fill="#292929" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr0-cls-13 zr0-cls-14"></path>
+<path d="M403.4 380l33.1 0l0 -26.6l-33.1 0Z" fill="#e34c26" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr0-cls-15 zr0-cls-16"></path>
+<path d="M451.4 380l33.1 0l0 -25.6l-33.1 0Z" fill="#00B4AB" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr0-cls-17 zr0-cls-18"></path>
+<path d="M499.4 380l33.1 0l0 -24.7l-33.1 0Z" fill="#4298b8" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr0-cls-19 zr0-cls-20"></path>
+</svg>
 <!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
