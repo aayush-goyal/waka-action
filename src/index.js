@@ -37,7 +37,13 @@ try {
 
     let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
 
-    const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
+    // const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
+    // const imgRegex = /<img\s+src="([^"]*)"\s+alt="([^"]*)"\s*\/?>/;
+    const imgRegex =
+        /<img\s+src="\.\/img\/img_languages_\d+_\d+_\d+\.svg"\s+alt="WakaTime chart"\s*\/?>/;
+    // const regex2 =
+    //     /<img src="\.\/img\/img_languages_\d_\d_\d\.svg" alt="WakaTime chart" \/>/;
+
     const imgTagMatches = mdContent.match(imgRegex);
 
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
@@ -62,15 +68,17 @@ try {
             );
             const chartSVG = apiResponse.data;
 
-            const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}`;
+            const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}.svg`;
+            const imgFilePathArr = imgFilePath.split('/');
             await fsPromises.writeFile(imgFilePath, chartSVG);
 
+            console.log('LOG:', imgTagMatches);
             if (!imgTagMatches) {
                 mdContent = mdContent.replace(
                     config,
                     config +
                         '\n' +
-                        `<img src="${imgFilePath}" alt="WakaTime chart" />`
+                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
                 );
             }
         } else {

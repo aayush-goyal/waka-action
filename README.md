@@ -76,7 +76,7 @@ Also check out our other products<br />
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=1&DT=0&R=0 -->
-<img src="/home/runner/work/waka-action/waka-action/img/img_languages_1_0_0" alt="WakaTime chart" />
+<img src="./img/img_languages_1_0_0.svg" alt="WakaTime chart" />
 <img src="/home/runner/work/waka-action/waka-action/img/img_languages_1_0_0" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
