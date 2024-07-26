@@ -82,7 +82,7 @@ Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 
 ✉️ Seeking new opportunities to further leverage my skill set, expand my learning horizons, and collaborate with an exceptional team in crafting stellar products that delight users. Reach out at aayushgoyal.mps@gmail.com.
 
-# 👀 Stalk Me Here:
+# 👀 Stalk Me Her 2e:
 <!-- Website -->
 <a href="https://aayushgoyal.in">
   <img src="https://storage.googleapis.com/aayushgoyal-web.appspot.com/addresses_icons/website.svg" height="32px" alt="website logo" />
