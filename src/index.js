@@ -63,9 +63,11 @@ try {
 
             const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
             const imgTagMatches = mdContent.match(imgRegex);
+            console.log('REGEX:', imgTagMatches);
 
             if (imgTagMatches) {
                 for (let imgTagMatch of imgTagMatches) {
+                    console.log('IMG: ', imgTagMatch);
                     mdContent = mdContent.replace(config, imgTagMatch);
                 }
             } else {
@@ -73,6 +75,7 @@ try {
                     config +
                     '\n' +
                     '<img src=`${imgFilePath}` alt="WakaTime chart" />';
+                console.log('CONFIG: ', config);
             }
         } else {
             console.log(`No query params provided in ${config}`);
