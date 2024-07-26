@@ -66,7 +66,7 @@ try {
 
             if (imgTagMatches) {
                 for (let imgTagMatch of imgTagMatches) {
-                    mdContent = mdContent.replace(imgTagMatch);
+                    mdContent = mdContent.replace(config, imgTagMatch);
                 }
             } else {
                 config =
