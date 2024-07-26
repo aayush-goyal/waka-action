@@ -35,10 +35,11 @@ try {
         fs.mkdirSync(imgFolderPath, { recursive: true });
     }
 
+    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
+
     const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
     const imgTagMatches = mdContent.match(imgRegex);
 
-    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
 
