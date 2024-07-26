@@ -35,6 +35,9 @@ try {
         fs.mkdirSync(imgFolderPath, { recursive: true });
     }
 
+    const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
+    const imgTagMatches = mdContent.match(imgRegex);
+
     let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
@@ -61,17 +64,8 @@ try {
             const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}`;
             await fsPromises.writeFile(imgFilePath, chartSVG);
 
-            const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
-            const imgTagMatches = mdContent.match(imgRegex);
-            console.log('REGEX:', imgTagMatches);
-
-            if (imgTagMatches) {
-                for (let imgTagMatch of imgTagMatches) {
-                    console.log('IMG: ', imgTagMatch);
-                    mdContent = mdContent.replace(config, imgTagMatch);
-                }
-            } else {
-                mdContent.replace(
+            if (!imgTagMatches) {
+                mdContent = mdContent.replace(
                     config,
                     config +
                         '\n' +
