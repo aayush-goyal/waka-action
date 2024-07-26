@@ -73,7 +73,7 @@ Also check out our other products<br />
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
-<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 600 450">
+<svg width="600" height="450" version="1.1" baseProfile="full" viewBox="0 0 600 450">
 <rect width="600" height="450" x="0" y="0" fill="none"></rect>
 <path d="M60 380.5L540 380.5" fill="transparent" stroke="#E0E6F1" class="zr1-cls-21"></path>
 <path d="M60 316.5L540 316.5" fill="transparent" stroke="#E0E6F1" class="zr1-cls-21"></path>
