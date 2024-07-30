@@ -77,9 +77,13 @@ try {
                 const imgTagIndex = configIndex + config.length;
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
-                    imgTagIndex + imgTagMatches[0].length
+                    imgTagIndex + imgTagMatches[0].length + 1
                 );
                 console.log('LOG:', existingImgTag);
+                mdContent.replace(
+                    existingImgTag,
+                    `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                );
             } else {
                 mdContent = mdContent.replace(
                     config,
