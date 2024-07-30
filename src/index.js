@@ -70,7 +70,7 @@ try {
             const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}.svg`;
             await fsPromises.writeFile(imgFilePath, chartSVG);
 
-            console.log('LOG:', imgTagMatches);
+            // console.log('LOG:', imgTagMatches);
             if (imgTagMatches) {
                 // find img tag just after this config. find replace content
                 const configIndex = mdContent.indexOf(config);

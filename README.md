@@ -74,7 +74,7 @@ Also check out our other products<br />
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=1&CT=1&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
 <img src="./img/img_languages_1_0_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
