@@ -1,6 +1,5 @@
 import axios from 'axios';
 import core from '@actions/core';
-import github from '@actions/github';
 import exec from '@actions/exec';
 import fs, { promises as fsPromises } from 'fs';
 
@@ -69,11 +68,19 @@ try {
             const chartSVG = apiResponse.data;
 
             const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}.svg`;
-            const imgFilePathArr = imgFilePath.split('/');
             await fsPromises.writeFile(imgFilePath, chartSVG);
 
             console.log('LOG:', imgTagMatches);
-            if (!imgTagMatches) {
+            if (imgTagMatches) {
+                // find img tag just after this config. find replace content
+                const configIndex = mdContent.indexOf(config);
+                const imgTagIndex = configIndex + config.length;
+                const existingImgTag = mdContent.substring(
+                    imgTagIndex,
+                    imgTagIndex + imgTagMatches[0].length
+                );
+                console.log('LOG:', existingImgTag);
+            } else {
                 mdContent = mdContent.replace(
                     config,
                     config +
@@ -86,7 +93,6 @@ try {
         }
     }
 
-    console.log('LOG:', mdContent);
     await fsPromises.writeFile(mdFilePath, mdContent);
 
     // Git Commit
