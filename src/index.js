@@ -80,7 +80,7 @@ try {
                     imgTagIndex + imgTagMatches[0].length + 1
                 );
                 console.log('LOG:', existingImgTag);
-                mdContent.replace(
+                mdContent = mdContent.replace(
                     existingImgTag,
                     `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
                 );
