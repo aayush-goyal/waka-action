@@ -79,6 +79,7 @@ try {
                     imgTagIndex,
                     imgTagIndex + imgTagMatches[0].length + 1
                 );
+                // TODO: Delete existing image.
                 console.log('LOG:', existingImgTag);
                 mdContent = mdContent.replace(
                     existingImgTag,
