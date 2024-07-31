@@ -110,9 +110,10 @@ try {
             const imgTagIndex = configIndex + config.length;
             console.log(
                 'IMG TAG: ',
-                mdContent.substring(imgTagIndex, imgTagIndex + 4)
+                mdContent.substring(imgTagIndex, imgTagIndex + 5)
             );
             if (mdContent.substring(imgTagIndex, imgTagIndex + 5) === '<img') {
+                console.log('HERE YES');
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     imgTagIndex + imgTagMatches[0].length + 1
@@ -125,6 +126,7 @@ try {
                     '\n' + `<img src="./img/${imgName}" alt="WakaTime chart" />`
                 );
             } else {
+                console.log('HERE NOT');
                 mdContent = mdContent.replace(
                     config,
                     config +
