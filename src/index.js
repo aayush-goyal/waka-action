@@ -21,18 +21,8 @@ function getStatType(statType) {
 }
 
 async function deleteUnusedImgFiles(imgFolderPath, currentMapConfig) {
-    let allImgFiles;
     console.log('LOG:', imgFolderPath);
-    await fsPromises.readdir(imgFolderPath, (err, files) => {
-        if (err) {
-            console.error('Error reading directory:', err);
-            return;
-        }
-
-        console.log('FILES 0:', files);
-
-        allImgFiles = files.map((file) => file); // Create an array of file names
-    });
+    const allImgFiles = await fsPromises.readdir(imgFolderPath);
 
     console.log('FILES:', allImgFiles);
 
