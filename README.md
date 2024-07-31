@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 [![tallileo Cover Image](https://storage.googleapis.com/aayushgoyal-web_images_public/tallileo_cover_image.png)][9]
@@ -18,7 +17,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 <!-- https://github.com/gautamkrishnar/gautamkrishnar/blob/master/README.md -->
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG_ST=0&CT=0&DT=2&R=2 -->
+<!-- WAKAWAKA_CONFIG_ST=0&CT=1&DT=0&R=0 -->
 <!-- WAKAWAKA_END -->
 
 ## ⌨️ My Arsenal
@@ -49,7 +48,8 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
-'+'<img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" /> />!-- WAKAWAKA_END -->
+<img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />
+<!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
 
@@ -65,6 +65,10 @@ Also check out our other products<br />
 2. [Prepped](https://prepped.cc)
 3. [NomNom](https://nomnom.life)
 
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=2&DT=0&R=0 -->
+<!-- WAKAWAKA_END -->
+
 ## Other Thing I Do
 
 📚 I love reading and have devoured 90+ novels since 2016. I boast about this fact because I used to be someone who hated reading. Now reading takes up a pretty heft amount of my daily routine.<br>
@@ -73,8 +77,8 @@ Also check out our other products<br />
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=1&CT=3&DT=1&R=2 -->
-'+'<img src="./img/img_categories_3_1_2.svg" alt="WakaTime chart" />" />
+<!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
+<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one

@@ -116,14 +116,16 @@ try {
 
                 mdContent = mdContent.replace(
                     existingImgTag,
-                    `\n'+'<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                    '\n' +
+                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
                 );
             } else {
                 mdContent = mdContent.replace(
                     config,
                     config +
                         '\n' +
-                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />` +
+                        '\n'
                 );
             }
         } else {
