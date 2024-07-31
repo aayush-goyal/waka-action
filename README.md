@@ -18,7 +18,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 <!-- https://github.com/gautamkrishnar/gautamkrishnar/blob/master/README.md -->
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG ST=0&CT=0&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG_ST=0&CT=0&DT=2&R=2 -->
 <!-- WAKAWAKA_END -->
 
 ## ⌨️ My Arsenal
@@ -73,7 +73,7 @@ Also check out our other products<br />
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=1&CT=3&DT=1&R=2 -->
 '+'<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
