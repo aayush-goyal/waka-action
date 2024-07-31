@@ -48,8 +48,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 🛠️ After taking a career break, I joined Pickright as the sole Technical Project Manager. Leading a team of 14 members was challenging but we successfully delivered 30 features in under 5 months which 1. scaled the product to handle 1 million users, 2. made our product designs coherent and easy for users, 3. reduced daily bugs count by 70% and made the product stable, 4. delivered a few internal tools to collaborate with cross-functional teams, and 5. improved team efficiency by 20%.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 --><img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 --><img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" /><!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
 
