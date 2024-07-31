@@ -20,87 +20,29 @@ function getStatType(statType) {
     }
 }
 
-try {
+async function deleteUnusedImgFiles(imgFolderPath, currentMapConfig) {
+    let allImgFiles;
+    await fsPromises.readdir(imgFolderPath, (err, files) => {
+        if (err) {
+            console.error('Error reading directory:', err);
+            return;
+        }
+
+        allImgFiles = files.map((file) => file); // Create an array of file names
+    });
+
+    for (let imgFile of allImgFiles) {
+        if (!currentMapConfig.has(imgFile)) {
+            await fsPromises.unlink(`${imgFolderPath}/${imgFile}`);
+        }
+    }
+}
+
+async function performGitCommit(workspace) {
     const commitEmail = core.getInput('COMMIT_EMAIL');
     const githubToken = core.getInput('GH_TOKEN');
     const githubActor = core.getInput('GH_ACTOR');
-    const wakaToken = core.getInput('WAKA_AUTH_TOKEN');
-    const workspace = core.getInput('GH_WORKSPACE');
-    const mdFilePath = `${workspace}/README.md`;
-    const imgFolderPath = `${workspace}/img`;
 
-    // Create `img` folder, if not exists already.
-    if (!fs.existsSync(imgFolderPath)) {
-        fs.mkdirSync(imgFolderPath, { recursive: true });
-    }
-
-    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
-
-    // const imgRegex = /<img src="([^"]*)" alt="WakaTime chart">/g;
-    // const imgRegex = /<img\s+src="([^"]*)"\s+alt="([^"]*)"\s*\/?>/;
-    const imgRegex =
-        /<img\s+src="\.\/img\/img_languages_\d+_\d+_\d+\.svg"\s+alt="WakaTime chart"\s*\/?>/;
-    // const regex2 =
-    //     /<img src="\.\/img\/img_languages_\d_\d_\d\.svg" alt="WakaTime chart" \/>/;
-
-    const imgTagMatches = mdContent.match(imgRegex);
-
-    const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
-    const configs = mdContent.match(configRegex);
-
-    for (let config of configs) {
-        const regex =
-            /<!-- WAKAWAKA_CONFIG__ST=(\d)&CT=(\d)&DT=(\d)&R=(\d) -->/;
-
-        // Match the string against the regex and extract the captured groups
-        const queryParams = config.match(regex);
-
-        if (queryParams) {
-            // Extracted digit values are in the matches array starting from index 1
-            const statType = getStatType(queryParams[1]);
-            const chartType = queryParams[2];
-            const dataType = queryParams[3];
-            const range = queryParams[4];
-
-            const apiResponse = await axios.get(
-                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
-            );
-            const chartSVG = apiResponse.data;
-
-            const imgFilePath = `${imgFolderPath}/img_${statType}_${chartType}_${dataType}_${range}.svg`;
-            await fsPromises.writeFile(imgFilePath, chartSVG);
-
-            // console.log('LOG:', imgTagMatches);
-            if (imgTagMatches) {
-                // find img tag just after this config. find replace content
-                const configIndex = mdContent.indexOf(config);
-                const imgTagIndex = configIndex + config.length;
-                const existingImgTag = mdContent.substring(
-                    imgTagIndex,
-                    imgTagIndex + imgTagMatches[0].length + 1
-                );
-                // TODO: Delete existing image.
-                console.log('LOG:', existingImgTag);
-                mdContent = mdContent.replace(
-                    existingImgTag,
-                    `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
-                );
-            } else {
-                mdContent = mdContent.replace(
-                    config,
-                    config +
-                        '\n' +
-                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
-                );
-            }
-        } else {
-            console.log(`No query params provided in ${config}`);
-        }
-    }
-
-    await fsPromises.writeFile(mdFilePath, mdContent);
-
-    // Git Commit
     await exec.exec('git', ['config', '--global', 'user.name', githubActor]);
     await exec.exec('git', ['config', '--global', 'user.email', commitEmail]);
     await exec.exec('git', ['add', '.']);
@@ -119,6 +61,85 @@ try {
             repoPathArr[repoPathArr.length - 1]
         }.git`
     ]);
+}
+
+try {
+    const wakaToken = core.getInput('WAKA_AUTH_TOKEN');
+    const workspace = core.getInput('GH_WORKSPACE');
+    const mdFilePath = `${workspace}/README.md`;
+    const imgFolderPath = `${workspace}/img`;
+
+    // Create `img` folder, if not exists already.
+    if (!fs.existsSync(imgFolderPath)) {
+        fs.mkdirSync(imgFolderPath, { recursive: true });
+    }
+
+    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
+
+    const imgRegex =
+        /<img\s+src="\.\/img\/img_languages_\d+_\d+_\d+\.svg"\s+alt="WakaTime chart"\s*\/?>/;
+
+    const imgTagMatches = mdContent.match(imgRegex);
+
+    const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
+    const configs = mdContent.match(configRegex);
+
+    const currentMapConfig = new Map();
+
+    for (let config of configs) {
+        const regex =
+            /<!-- WAKAWAKA_CONFIG__ST=(\d)&CT=(\d)&DT=(\d)&R=(\d) -->/;
+
+        // Match the string against the regex and extract the captured groups
+        const queryParams = config.match(regex);
+
+        if (queryParams) {
+            // Extracted digit values are in the matches array starting from index 1
+            const statType = getStatType(queryParams[1]);
+            const chartType = queryParams[2];
+            const dataType = queryParams[3];
+            const range = queryParams[4];
+
+            const imgName = `img_${statType}_${chartType}_${dataType}_${range}.svg`;
+            currentMapConfig.set(imgName, true);
+
+            const apiResponse = await axios.get(
+                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
+            );
+            const chartSVG = apiResponse.data;
+
+            const imgFilePath = `${imgFolderPath}/${imgName}`;
+            await fsPromises.writeFile(imgFilePath, chartSVG);
+
+            if (imgTagMatches) {
+                const configIndex = mdContent.indexOf(config);
+                const imgTagIndex = configIndex + config.length;
+                const existingImgTag = mdContent.substring(
+                    imgTagIndex,
+                    imgTagIndex + imgTagMatches[0].length + 1
+                );
+
+                mdContent = mdContent.replace(
+                    existingImgTag,
+                    `\n'+'<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                );
+            } else {
+                mdContent = mdContent.replace(
+                    config,
+                    config +
+                        '\n' +
+                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                );
+            }
+        } else {
+            console.log(`No query params provided in ${config}`);
+        }
+    }
+
+    await fsPromises.writeFile(mdFilePath, mdContent);
+
+    deleteUnusedImgFiles(imgFolderPath, currentMapConfig);
+    performGitCommit(workspace);
 } catch (error) {
     core.setFailed(error.message);
 }
