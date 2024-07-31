@@ -143,8 +143,8 @@ try {
 
     await fsPromises.writeFile(mdFilePath, mdContent);
 
-    deleteUnusedImgFiles(imgFolderPath, currentMapConfig);
-    performGitCommit(workspace);
+    await deleteUnusedImgFiles(imgFolderPath, currentMapConfig);
+    await performGitCommit(workspace);
 } catch (error) {
     core.setFailed(error.message);
 }
