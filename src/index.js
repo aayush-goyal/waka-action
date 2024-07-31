@@ -108,11 +108,9 @@ try {
 
             const configIndex = mdContent.indexOf(config);
             const imgTagIndex = configIndex + config.length;
-            console.log(
-                'IMG TAG: ',
-                mdContent.substring(imgTagIndex, imgTagIndex + 5)
-            );
-            if (mdContent.substring(imgTagIndex, imgTagIndex + 5) === '<img') {
+            const imgStr = mdContent.substring(imgTagIndex, imgTagIndex + 5);
+            console.log('IMG TAG: ', imgStr);
+            if (imgStr === '<img') {
                 console.log('HERE YES');
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
