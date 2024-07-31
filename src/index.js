@@ -29,7 +29,7 @@ async function deleteUnusedImgFiles(imgFolderPath, currentMapConfig) {
             return;
         }
 
-        console.log('LOG:', files);
+        console.log('FILES 0:', files);
 
         allImgFiles = files.map((file) => file); // Create an array of file names
     });
