@@ -67,14 +67,18 @@ Also check out our other products<br />
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=2&DT=0&R=0 -->
-<img src="./img/img_languages_2_0_0.svg" alt="WakaTime chart" />d have devoured 90+ novels since 2016. I boast about this fact because I used to be someone who hated reading. Now reading takes up a pretty heft amount of my daily routine.<br>
+<!-- WAKAWAKA_END -->
+
+## Other Thing I Do
+
+📚 I love reading and have devoured 90+ novels since 2016. I boast about this fact because I used to be someone who hated reading. Now reading takes up a pretty heft amount of my daily routine.<br>
 💪🏼 I also try to keep my body in shape and working out is a part of my daily routine. You might also find me fighting for my team when I am playing a team sport or fighting for myself when I am playing an individual sport.
 
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
-<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />>
+<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one

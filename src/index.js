@@ -106,9 +106,9 @@ try {
             const imgFilePath = `${imgFolderPath}/${imgName}`;
             await fsPromises.writeFile(imgFilePath, chartSVG);
 
-            if (imgTagMatches) {
-                const configIndex = mdContent.indexOf(config);
-                const imgTagIndex = configIndex + config.length;
+            const configIndex = mdContent.indexOf(config);
+            const imgTagIndex = configIndex + config.length;
+            if (mdContent.substring(imgTagIndex, imgTagIndex + 5) === '<img') {
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     imgTagIndex + imgTagMatches[0].length + 1
@@ -116,15 +116,14 @@ try {
 
                 mdContent = mdContent.replace(
                     existingImgTag,
-                    '\n' +
-                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />`
+                    '\n' + `<img src="./img/${imgName}" alt="WakaTime chart" />`
                 );
             } else {
                 mdContent = mdContent.replace(
                     config,
                     config +
                         '\n' +
-                        `<img src="./img/img_${statType}_${chartType}_${dataType}_${range}.svg" alt="WakaTime chart" />` +
+                        `<img src="./img/${imgName}" alt="WakaTime chart" />` +
                         '\n'
                 );
             }
