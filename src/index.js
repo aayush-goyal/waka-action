@@ -112,11 +112,13 @@ try {
                 'IMG TAG: ',
                 mdContent.substring(imgTagIndex, imgTagIndex + 4)
             );
-            if (mdContent.substring(imgTagIndex, imgTagIndex + 4) === '<img') {
+            if (mdContent.substring(imgTagIndex, imgTagIndex + 5) === '<img') {
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     imgTagIndex + imgTagMatches[0].length + 1
                 );
+
+                console.log('IMG TAG 2:', existingImgTag);
 
                 mdContent = mdContent.replace(
                     existingImgTag,
