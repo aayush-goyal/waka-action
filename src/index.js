@@ -108,7 +108,7 @@ try {
 
             const configIndex = mdContent.indexOf(config);
             const imgTagIndex = configIndex + config.length;
-            if (mdContent.substring(imgTagIndex, imgTagIndex + 5) === '<img') {
+            if (mdContent.substring(imgTagIndex, imgTagIndex + 4) === '<img') {
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     imgTagIndex + imgTagMatches[0].length + 1
