@@ -48,7 +48,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
-<img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />
+<img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />>
 <!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
@@ -67,7 +67,7 @@ Also check out our other products<br />
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=2&DT=0&R=0 -->
-<img src="./img/img_languages_2_0_0.svg" alt="WakaTime chart" />
+<img src="./img/img_languages_2_0_0.svg" alt="WakaTime chart" />>
 
 <!-- WAKAWAKA_END -->
 
@@ -80,7 +80,7 @@ Also check out our other products<br />
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
-<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />>
+<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />/>>
 <!-- WAKAWAKA_END -->
 
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
