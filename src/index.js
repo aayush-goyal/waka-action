@@ -115,8 +115,8 @@ try {
             if (imgStr === '<img') {
                 console.log('HERE YES');
                 const existingImgTag = mdContent.substring(
-                    imgTagIndex,
-                    imgTagIndex + imgTagMatches[0].length
+                    imgTagIndex + 1,
+                    imgTagIndex + imgTagMatches[0].length + 1
                 );
 
                 console.log('IMG TAG 2:', existingImgTag);
