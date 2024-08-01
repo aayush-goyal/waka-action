@@ -112,11 +112,11 @@ try {
                 .substring(imgTagIndex, imgTagIndex + 5)
                 .trim();
             console.log('IMG TAG: ', imgStr);
-            const lineBreakIndex = mdContent
-                .substring(imgTagIndex)
-                .indexOf('\n');
             if (imgStr === '<img') {
                 console.log('HERE YES');
+                const lineBreakIndex = mdContent
+                    .substring(imgTagIndex)
+                    .indexOf('\n');
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     lineBreakIndex
