@@ -117,6 +117,7 @@ try {
                 const lineBreakIndex = mdContent
                     .substring(imgTagIndex)
                     .indexOf('\n');
+                console.log('INDEXES:', imgTagIndex, lineBreakIndex);
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     lineBreakIndex
