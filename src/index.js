@@ -116,7 +116,7 @@ try {
                 console.log('HERE YES');
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
-                    imgTagIndex + imgTagMatches[0].length + 1
+                    imgTagIndex + imgTagMatches[0].length
                 );
 
                 console.log('IMG TAG 2:', existingImgTag);
@@ -131,8 +131,7 @@ try {
                     config,
                     config +
                         '\n' +
-                        `<img src="./img/${imgName}" alt="WakaTime chart" />` +
-                        '\n'
+                        `<img src="./img/${imgName}" alt="WakaTime chart" />`
                 );
             }
         } else {
