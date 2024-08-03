@@ -119,7 +119,7 @@ try {
                 console.log('INDEXES:', imgTagIndex, lineBreakIndex);
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
-                    lineBreakIndex
+                    imgTagIndex + lineBreakIndex + 1
                 );
 
                 console.log('IMG TAG 2:', existingImgTag);
