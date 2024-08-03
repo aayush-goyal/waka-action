@@ -68,7 +68,6 @@ Also check out our other products<br />
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=3&DT=0&R=0 -->
 <img src="./img/img_languages_2_0_0.svg" alt="WakaTime chart" />
-
 <!-- WAKAWAKA_END -->
 
 ## Other Thing I Do

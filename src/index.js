@@ -64,17 +64,11 @@ try {
     const mdFilePath = `${workspace}/README.md`;
     const imgFolderPath = `${workspace}/img`;
 
-    // Create `img` folder, if not exists already.
     if (!fs.existsSync(imgFolderPath)) {
         fs.mkdirSync(imgFolderPath, { recursive: true });
     }
 
     let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
-
-    const imgRegex =
-        /<img\s+src="\.\/img\/img_languages_\d+_\d+_\d+\.svg"\s+alt="WakaTime chart"\s*\/?>/;
-
-    const imgTagMatches = mdContent.match(imgRegex);
 
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
@@ -89,6 +83,7 @@ try {
         const queryParams = config.match(regex);
 
         if (queryParams) {
+            console.log('LOG:', config);
             // Extracted digit values are in the matches array starting from index 1
             const statType = getStatType(queryParams[1]);
             const chartType = queryParams[2];
@@ -111,18 +106,17 @@ try {
             const imgStr = mdContent
                 .substring(imgTagIndex, imgTagIndex + 5)
                 .trim();
-            // console.log('IMG TAG: ', imgStr);
+
             if (imgStr === '<img') {
                 const lineBreakIndex = mdContent
                     .substring(imgTagIndex + 1)
                     .indexOf('\n');
-                console.log('INDEXES:', imgTagIndex, lineBreakIndex);
                 const existingImgTag = mdContent.substring(
                     imgTagIndex,
                     imgTagIndex + lineBreakIndex + 1
                 );
 
-                console.log('IMG TAG 2:', existingImgTag);
+                console.log('IMG TAG:', existingImgTag);
 
                 mdContent = mdContent.replace(
                     existingImgTag,
