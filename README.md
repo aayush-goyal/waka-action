@@ -66,7 +66,7 @@ Also check out our other products<br />
 3. [NomNom](https://nomnom.life)
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=2&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=3&DT=0&R=0 -->
 <img src="./img/img_languages_2_0_0.svg" alt="WakaTime chart" />
 
 <!-- WAKAWAKA_END -->
@@ -78,14 +78,13 @@ Also check out our other products<br />
 
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
-<!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=1&R=0 -->
-<img src="./img/img_categories_2_1_0.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
-
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 
 ✉️ Seeking new opportunities to further leverage my skill set, expand my learning horizons, and collaborate with an exceptional team in crafting stellar products that delight users. Reach out at aayushgoyal.mps@gmail.com.
+
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__ST=5&CT=5&DT=5&R=5 -->
+<!-- WAKAWAKA_END -->
 
 # 👀 Stalk Me Her 2e:
 <!-- Website -->
