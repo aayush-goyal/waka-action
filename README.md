@@ -82,7 +82,7 @@ Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 ✉️ Seeking new opportunities to further leverage my skill set, expand my learning horizons, and collaborate with an exceptional team in crafting stellar products that delight users. Reach out at aayushgoyal.mps@gmail.com.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=5&CT=5&DT=5&R=5 -->
+<!-- WAKAWAKA_CONFIG__ST=3&CT=5&DT=5&R=5 -->
 <!-- WAKAWAKA_END -->
 
 # 👀 Stalk Me Her 2e:
