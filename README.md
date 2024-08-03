@@ -18,6 +18,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=0&CT=1&DT=0&R=0 -->
+<img src="./img/img_languages_1_0_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
 ## ⌨️ My Arsenal
@@ -48,7 +49,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=3&CT=0&DT=0&R=0 -->
-<img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />
+<img src="./img/img_os_0_0_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
@@ -83,7 +84,7 @@ Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 
 <!-- WAKAWAKA_START -->
 <!-- WAKAWAKA_CONFIG__ST=1&CT=5&DT=5&R=9 -->
-<img src="./img/img_os_5_5_5.svg" alt="WakaTime chart" />
+<img src="./img/img_categories_5_5_9.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
 # 👀 Stalk Me Her 2e:
