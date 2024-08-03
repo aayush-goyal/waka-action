@@ -17,7 +17,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 <!-- https://github.com/gautamkrishnar/gautamkrishnar/blob/master/README.md -->
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG_ST=0&CT=1&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=1&DT=0&R=0 -->
 <!-- WAKAWAKA_END -->
 
 ## ⌨️ My Arsenal
@@ -47,7 +47,7 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 🛠️ After taking a career break, I joined Pickright as the sole Technical Project Manager. Leading a team of 14 members was challenging but we successfully delivered 30 features in under 5 months which 1. scaled the product to handle 1 million users, 2. made our product designs coherent and easy for users, 3. reduced daily bugs count by 70% and made the product stable, 4. delivered a few internal tools to collaborate with cross-functional teams, and 5. improved team efficiency by 20%.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
+<!-- WAKAWAKA_CONFIG__ST=3&CT=0&DT=0&R=0 -->
 <img src="./img/img_languages_0_0_0.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
@@ -82,7 +82,7 @@ Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 ✉️ Seeking new opportunities to further leverage my skill set, expand my learning horizons, and collaborate with an exceptional team in crafting stellar products that delight users. Reach out at aayushgoyal.mps@gmail.com.
 
 <!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=3&CT=5&DT=5&R=5 -->
+<!-- WAKAWAKA_CONFIG__ST=1&CT=5&DT=5&R=9 -->
 <img src="./img/img_os_5_5_5.svg" alt="WakaTime chart" />
 <!-- WAKAWAKA_END -->
 
