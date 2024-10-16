@@ -21,10 +21,7 @@ function getStatType(statType) {
 }
 
 async function deleteUnusedImgFiles(imgFolderPath, currentMapConfig) {
-    console.log('LOG:', imgFolderPath);
     const allImgFiles = await fsPromises.readdir(imgFolderPath);
-
-    console.log('FILES:', allImgFiles);
 
     for (let imgFile of allImgFiles) {
         if (!currentMapConfig.has(imgFile)) {
@@ -61,9 +58,53 @@ async function performGitCommit(workspace) {
 try {
     const wakaToken = core.getInput('WAKA_AUTH_TOKEN');
     const workspace = core.getInput('GH_WORKSPACE');
+    const wakaUsername = core.getInput('WAKA_USERNAME');
     const mdFilePath = `${workspace}/README.md`;
     const imgFolderPath = `${workspace}/img`;
 
+    // Stats Controller
+    const statConfigRegex = /<!-- WAKAWAKA_CONFIG__STATS_([A-Z_]+) -->/g;
+    const statsConfigs = mdContent.match(statConfigRegex);
+
+    for (let config of statsConfigs) {
+        const regex = /<!-- WAKAWAKA_CONFIG__([A-Z_]+) -->/;
+
+        const queryParams = config.match(regex);
+
+        if (queryParams) {
+            const statType = queryParams[1];
+            console.log('LOG STAT TYPE:', statType);
+            let endpoint;
+            if (stat_type === 'BEST_DAY') {
+                endpoint = 'best_day';
+            } else {
+                endpoint = 'daily_avg';
+            }
+            const apiUrl =
+                `${API_BASE_URL}/stats/` +
+                endpoint +
+                `?username=${wakaUsername}&token=${wakaToken}}`;
+            console.log('LOG API URL:', apiUrl);
+            try {
+                const apiResponse = await axios.get(apiUrl);
+
+                if (apiResponse.status !== 200) {
+                    console.error(
+                        'ERROR:',
+                        'Some issue happened.',
+                        apiResponse.data.message
+                    );
+                } else {
+                    const shieldImg = apiResponse.data.data;
+                    console.log('LOG IMG SHIELD:', shieldImg);
+                }
+            } catch (error) {
+                console.error('ERROR:', error.toString());
+            }
+        }
+    }
+
+    // Charts Controller
     if (!fs.existsSync(imgFolderPath)) {
         fs.mkdirSync(imgFolderPath, { recursive: true });
     }
@@ -83,7 +124,6 @@ try {
         const queryParams = config.match(regex);
 
         if (queryParams) {
-            console.log('LOG:', config);
             // Extracted digit values are in the matches array starting from index 1
             const statType = getStatType(queryParams[1]);
             const chartType = queryParams[2];
@@ -94,7 +134,7 @@ try {
             currentMapConfig.set(imgName, true);
 
             const apiResponse = await axios.get(
-                `${API_BASE_URL}/charts/${statType}?range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
+                `${API_BASE_URL}/charts/${statType}?username=${wakaUsername}&range=${range}&chart_type=${chartType}&data_type=${dataType}&token=${wakaToken}`
             );
             const chartSVG = apiResponse.data;
 
@@ -116,14 +156,11 @@ try {
                     imgTagIndex + lineBreakIndex + 1
                 );
 
-                console.log('IMG TAG:', existingImgTag);
-
                 mdContent = mdContent.replace(
                     existingImgTag,
                     '\n' + `<img src="./img/${imgName}" alt="WakaTime chart" />`
                 );
             } else {
-                console.log('HERE NOT');
                 mdContent = mdContent.replace(
                     config,
                     config +
@@ -132,7 +169,7 @@ try {
                 );
             }
         } else {
-            console.log(`No query params provided in ${config}`);
+            console.error(`No query params provided in ${config}`);
         }
     }
 
