@@ -1,9 +1,22 @@
+
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 [![tallileo Cover Image](https://storage.googleapis.com/aayushgoyal-web_images_public/tallileo_cover_image.png)][9]
 
 Hi, there, 👋🏼 <br />
 I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
+
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__STATS_BEST_DAY -->
+<!-- WAKAWAKA_END -->
+
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__STATS_DAILY_AVG -->
+<!-- WAKAWAKA_END -->
+
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__ST=0&CT=0&DT=0&R=0 -->
+<!-- WAKAWAKA_END -->
 
 ### Listen to my some music first 🎷
 ![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=yqcdohelabbyqn9oliqljy5z6)
@@ -12,14 +25,6 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 ⏱ I have almost 6 years of experience in the dynamic tech industry, predominantly within the FinTech domain. I have been coding since **2011**.
 
 🎓 Graduating from [NIT Srinagar](https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Srinagar) has taught me a few important life skills, notably resilience amidst challenges. I have applied this same principle throughout my career so far.
-
-<!-- TODO -->
-<!-- https://github.com/gautamkrishnar/gautamkrishnar/blob/master/README.md -->
-
-<!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=1&DT=0&R=0 -->
-<img src="./img/img_languages_1_0_0.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
 
 ## ⌨️ My Arsenal
 <details>
@@ -40,17 +45,21 @@ I am Aayush Goyal from [India 🇮🇳](https://en.wikipedia.org/wiki/India).
 **IDEs**: • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" height="20px" width="20px" /> VSCode • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" height="20px" width="20px" /> IntelliJ IDEA <br />
 **Tools**: • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" height="20px" width="20px" /> Git • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" height="20px" width="20px" /> GitHub • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" height="20px" width="20px" /> Figma • <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height="20px" width="20px" /> GitHub Actions • Miro • Retool <br />
 
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__ST=1&CT=2&DT=0&R=0 -->
+<!-- WAKAWAKA_END -->
+
+<!-- WAKAWAKA_START -->
+<!-- WAKAWAKA_CONFIG__ST=3&CT=3&DT=0&R=0 -->
+<!-- WAKAWAKA_END -->
+
+
 ## 💼 Career So Far
 🏆 In my tenure as the founder of deriva, I made democratizing personal finance for Indians my end goal. I honed my product skills by teaching myself all the essential skills like UX Research, PDLC, and Stakeholder Management, and leveraging existing skills in Agile, SDE, and Leadership to deliver 2 MVPs (one with pivot). This was also when I truly learned the art of networking and used it to my advantage. My major achievements were raising funds from friends & family, and conducting thorough market and user research to understand the market space and business.
 
 🌟 Then I joined 50Fin as a founding member. It was truly transformative. I wrote code, hired initial founding team members, collaborated on the initial product vision, and delivered an MVP with the product team in under 4 months. Additionally, I oversaw marketing to increase brand awareness, and stocked pantry items!
 
 🛠️ After taking a career break, I joined Pickright as the sole Technical Project Manager. Leading a team of 14 members was challenging but we successfully delivered 30 features in under 5 months which 1. scaled the product to handle 1 million users, 2. made our product designs coherent and easy for users, 3. reduced daily bugs count by 70% and made the product stable, 4. delivered a few internal tools to collaborate with cross-functional teams, and 5. improved team efficiency by 20%.
-
-<!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=3&CT=0&DT=0&R=0 -->
-<img src="./img/img_os_0_0_0.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
 
 📚 In my downtime, I indulge in diverse activities - whether absorbing knowledge through reading, engaging in sports, crafting DIY projects, or playing bartender for friends and family.
 
@@ -66,11 +75,6 @@ Also check out our other products<br />
 2. [Prepped](https://prepped.cc)
 3. [NomNom](https://nomnom.life)
 
-<!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=0&CT=3&DT=0&R=0 -->
-<img src="./img/img_languages_3_0_0.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
-
 ## Other Thing I Do
 
 📚 I love reading and have devoured 90+ novels since 2016. I boast about this fact because I used to be someone who hated reading. Now reading takes up a pretty heft amount of my daily routine.<br>
@@ -78,16 +82,13 @@ Also check out our other products<br />
 
 🚨 Views expressed are my own and do not reflect those of deriva Inc, its management, employees, customers, or any other affiliated party.
 
+
+
 Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 
 ✉️ Seeking new opportunities to further leverage my skill set, expand my learning horizons, and collaborate with an exceptional team in crafting stellar products that delight users. Reach out at aayushgoyal.mps@gmail.com.
 
-<!-- WAKAWAKA_START -->
-<!-- WAKAWAKA_CONFIG__ST=1&CT=5&DT=5&R=9 -->
-<img src="./img/img_categories_5_5_9.svg" alt="WakaTime chart" />
-<!-- WAKAWAKA_END -->
-
-# 👀 Stalk Me Her 2e:
+# 👀 Stalk Me Here:
 <!-- Website -->
 <a href="https://aayushgoyal.in">
   <img src="https://storage.googleapis.com/aayushgoyal-web.appspot.com/addresses_icons/website.svg" height="32px" alt="website logo" />
@@ -121,53 +122,9 @@ Use my calendly link: https://calendly.com/aayushgoyal/one-on-one
 <!-- [![wakatime](https://wakatime.com/badge/user/13fde520-c1e3-4c7c-b538-6905d8c3ea6a.svg)](https://wakatime.com/@13fde520-c1e3-4c7c-b538-6905d8c3ea6a) -->
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-2%2C660%20hrs%2026%20mins-blue)
 
-<img src="http://localhost:8080/charts/languages?range=0&chart_type=0&data_type=0&token=waka_tok_pBdorwDtjOpwcSXz5J6sncXhI6VQ0Cc8PfdbdJwxxY1fA9r92cUNgqfKpMxSXCWIqZ6Mo088J2MhFbg2&refresh_token=waka_ref_XPytg2bQj5iy6kboavuE7XCRbf0XDOFek5vDVtKf90lAYkVAhIDhxFK3Qn0rMcZzfaVcIdCwPUNteoTX&uid=13fde520-c1e3-4c7c-b538-6905d8c3ea6a&token_type=bearer&expires_at=2025-07-16T21%3A23%3A28Z&expires_in=31536000&scope=read_heartbeats%2Cread_goals%2Cread_private_leaderboards" />
-
-## All-time Stats
-<!-- Languages -->
-<details>
-  <summary>
-    <h3>Languages</h3>
-  </summary>
-  <img src="https://wakatime.com/share/@aayushgoyalmps/518df051-2e25-4a24-9b63-6dad635ec638.svg" />
-</details>
-<!-- Frameworks -->
-<details>
-  <summary>
-    <h3>Frameworks</h3>
-  </summary>
-  <img src="https://wakatime.com/share/@aayushgoyalmps/518df051-2e25-4a24-9b63-6dad635ec638.svg" />
-</details>
-<!-- Projects -->
-<details>
-  <summary>
-    <h3>Projects</h3>
-  </summary>
-  <img src="https://wakatime.com/share/@aayushgoyalmps/518df051-2e25-4a24-9b63-6dad635ec638.svg" />
-</details>
-
-<img src="http://localhost:8080/charts">
-<!-- <div>ad -->
-
-I am an early
-
-My most productive days
-
-Languages
-
-Show Editors
-
-Mostly code in
-
-
-<!--END_SECTION:waka-->
-
-
-
-## &#x1f4c8; My GitHub Stats
-
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=aayush-goyal&show_icons=true&line_height=27&count_private=true&title_color=974992&text_color=000000&icon_color=99B3EF&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-10.9%20million%20lines%20of%20code-blue)
 
 <a href="https://github.com/aayush-goyal/aayush-goyal">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=aayush-goyal&show_icons=true&line_height=27&count_private=true&title_color=974992&text_color=000000&icon_color=99B3EF" alt="Aayush Goyal's GitHub Stats" />
