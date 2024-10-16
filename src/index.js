@@ -89,7 +89,7 @@ try {
             const apiUrl =
                 `${API_BASE_URL}/stats/` +
                 endpoint +
-                `?username=${wakaUsername}&token=${wakaToken}}`;
+                `?username=aayushgoyalmps&token=waka_tok_rFmnvzThanjva4D6PjBG44VWooXEw8Wll4UEqPU6gZkyfrQsv4wk2Bs0Gk3qvO16ipDEcMNOLXzcqb2N&refresh_token=waka_ref_VOvP3fnTEVWriOn3jWMymkySNwalCInSmiHhffqRe35qtKjL75vrxgz5J1n97bymQWKHKqApY39b1nV9&uid=13fde520-c1e3-4c7c-b538-6905d8c3ea6a&token_type=bearer&expires_at=2025-10-05T12%3A42%3A31Z&expires_in=31536000&scope=read_heartbeats%2Cread_private_leaderboards%2Cread_goals`;
             console.log('LOG API URL:', apiUrl);
             try {
                 const apiResponse = await axios.get(apiUrl);
