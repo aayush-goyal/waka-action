@@ -62,12 +62,18 @@ try {
     const mdFilePath = `${workspace}/README.md`;
     const imgFolderPath = `${workspace}/img`;
 
+    if (!fs.existsSync(imgFolderPath)) {
+        fs.mkdirSync(imgFolderPath, { recursive: true });
+    }
+
+    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
+
     // Stats Controller
     const statConfigRegex = /<!-- WAKAWAKA_CONFIG__STATS_([A-Z_]+) -->/g;
     const statsConfigs = mdContent.match(statConfigRegex);
 
     for (let config of statsConfigs) {
-        const regex = /<!-- WAKAWAKA_CONFIG__([A-Z_]+) -->/;
+        const regex = /<!-- WAKAWAKA_CONFIG__STATS_([A-Z_]+) -->/;
 
         const queryParams = config.match(regex);
 
@@ -75,7 +81,7 @@ try {
             const statType = queryParams[1];
             console.log('LOG STAT TYPE:', statType);
             let endpoint;
-            if (stat_type === 'BEST_DAY') {
+            if (statType === 'BEST_DAY') {
                 endpoint = 'best_day';
             } else {
                 endpoint = 'daily_avg';
@@ -97,6 +103,23 @@ try {
                 } else {
                     const shieldImg = apiResponse.data.data;
                     console.log('LOG IMG SHIELD:', shieldImg);
+                    if (statType === 'BEST_DAY') {
+                        mdContent.replace(
+                            '<!-- WAKAWAKA_CONFIG__STATS_BEST_DAY -->',
+                            '<!-- WAKAWAKA_CONFIG__STATS_BEST_DAY -->' +
+                                '\n' +
+                                shieldImg +
+                                '\n'
+                        );
+                    } else {
+                        mdContent.replace(
+                            '<!-- WAKAWAKA_CONFIG__STATS_DAILY_AVG -->',
+                            '<!-- WAKAWAKA_CONFIG__STATS_DAILY_AVG -->' +
+                                '\n' +
+                                shieldImg +
+                                '\n'
+                        );
+                    }
                 }
             } catch (error) {
                 console.error('ERROR:', error.toString());
@@ -105,12 +128,6 @@ try {
     }
 
     // Charts Controller
-    if (!fs.existsSync(imgFolderPath)) {
-        fs.mkdirSync(imgFolderPath, { recursive: true });
-    }
-
-    let mdContent = await fsPromises.readFile(mdFilePath, 'utf8');
-
     const configRegex = /<!-- WAKAWAKA_CONFIG__ST=\d&CT=\d&DT=\d&R=\d -->/g;
     const configs = mdContent.match(configRegex);
 
